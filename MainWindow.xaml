@@ -1,0 +1,31 @@
+﻿<Window x:Class="DigiproProjectFirst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigiproProjectFirst"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="Black" BorderThickness="3" ToolTip="Frequency Domain" Grid.Column="0" Margin="5">
+            <Label Content="Frequency Domain" HorizontalAlignment="Center" FontSize="16"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="3" ToolTip="Time Domain" Grid.Column="0" Grid.Row="1" Margin="5">
+            <Label Content="Time Domain" HorizontalAlignment="Center" FontSize="16"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="3" ToolTip="Menus"  Grid.Column="1"  Grid.Row="0" Grid.RowSpan="2" Margin="5"/>
+        <Button Content="Add" Click="AddFileClick" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,68,0,0" VerticalAlignment="Top" Width="240" Height="72"/>
+        <Button Content="Function 2" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,187,0,0" VerticalAlignment="Top" Width="240" Height="72"/>
+        <Button Content="Function 3" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,38.2,0,0" VerticalAlignment="Top" Width="240" Height="72" Grid.Row="1"/>
+        <Button Content="Function 4" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,164.2,0,0" VerticalAlignment="Top" Width="240" Height="72" Grid.Row="1"/>
+    </Grid>
+</Window>
