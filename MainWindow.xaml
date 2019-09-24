@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:DigiproProjectFirst"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
+        Title="Sample Program" Height="600" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -17,15 +18,27 @@
         </Grid.RowDefinitions>
 
         <Border BorderBrush="Black" BorderThickness="3" ToolTip="Frequency Domain" Grid.Column="0" Margin="5">
-            <Label Content="Frequency Domain" HorizontalAlignment="Center" FontSize="16"/>
+            <Label Content="Time Domain" HorizontalAlignment="Center" FontSize="16"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="3" ToolTip="Time Domain" Grid.Column="0" Grid.Row="1" Margin="5">
-            <Label Content="Time Domain" HorizontalAlignment="Center" FontSize="16"/>
+            <Label Content="Frequency Domain" HorizontalAlignment="Center" FontSize="16"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="3" ToolTip="Menus"  Grid.Column="1"  Grid.Row="0" Grid.RowSpan="2" Margin="5"/>
         <Button Content="Add" Click="AddFileClick" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,68,0,0" VerticalAlignment="Top" Width="240" Height="72"/>
         <Button Content="Function 2" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,187,0,0" VerticalAlignment="Top" Width="240" Height="72"/>
         <Button Content="Function 3" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,38.2,0,0" VerticalAlignment="Top" Width="240" Height="72" Grid.Row="1"/>
         <Button Content="Function 4" Background="Aquamarine" Grid.Column="1" HorizontalAlignment="Left" Margin="49.6,164.2,0,0" VerticalAlignment="Top" Width="240" Height="72" Grid.Row="1"/>
+        <oxy:PlotView  Margin="10,35,10,10" Panel.ZIndex="-1"  Grid.Column="0" Grid.Row="0" Name="plot" Grid.ColumnSpan="1">
+            <!--<oxy:PlotView.Series>
+                <oxy:LineSeries ItemsSource="{Binding Points}"/>
+            </oxy:PlotView.Series>-->
+        </oxy:PlotView>
+        <oxy:PlotView  Margin="10,35,10,10" Panel.ZIndex="-1"  Grid.Column="0" Grid.Row="1" Name="plot2" Grid.ColumnSpan="1">
+            <!--<oxy:PlotView.Series>
+                <oxy:LineSeries ItemsSource="{Binding Points}"/>
+            </oxy:PlotView.Series>-->
+        </oxy:PlotView>
     </Grid>
+    
+    
 </Window>
